@@ -141,8 +141,8 @@ func (tr *tracer) newRecordingSpan(psc, sc trace.SpanContext, name string, sr Sa
 		s.AddLink(l)
 	}
 
-	s.SetAttributes(sr.Attributes...)
-	s.SetAttributes(config.Attributes()...)
+	attrs := append(sr.Attributes, config.Attributes()...)
+	s.SetAttributes(attrs...)
 
 	return s
 }
