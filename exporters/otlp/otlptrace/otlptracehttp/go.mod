@@ -1,6 +1,8 @@
 module go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp
 
-go 1.21
+go 1.21.12
+
+toolchain go1.22.5
 
 require (
 	github.com/cenkalti/backoff/v4 v4.3.0
@@ -9,7 +11,10 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.28.0
 	go.opentelemetry.io/otel/sdk v1.28.0
 	go.opentelemetry.io/otel/trace v1.28.0
-	go.opentelemetry.io/proto/otlp v1.3.1
+	go.opentelemetry.io/proto/otlp/collector v0.0.0-00010101000000-000000000000
+	go.opentelemetry.io/proto/otlp/common v0.0.0-00010101000000-000000000000
+	go.opentelemetry.io/proto/otlp/resource v0.0.0-00010101000000-000000000000
+	go.opentelemetry.io/proto/otlp/trace v0.0.0-00010101000000-000000000000
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.34.2
 )
@@ -40,3 +45,19 @@ replace go.opentelemetry.io/otel/sdk => ../../../../sdk
 replace go.opentelemetry.io/otel/trace => ../../../../trace
 
 replace go.opentelemetry.io/otel/metric => ../../../../metric
+
+replace go.opentelemetry.io/proto/otlp => ../../../../../opentelemetry-proto-go/otlp
+
+replace go.opentelemetry.io/proto/otlp/collector => ../../../../../opentelemetry-proto-go/otlp/collector
+
+replace go.opentelemetry.io/proto/otlp/common => ../../../../../opentelemetry-proto-go/otlp/common
+
+replace go.opentelemetry.io/proto/otlp/logs => ../../../../../opentelemetry-proto-go/otlp/logs
+
+replace go.opentelemetry.io/proto/otlp/metrics => ../../../../../opentelemetry-proto-go/otlp/metrics
+
+replace go.opentelemetry.io/proto/otlp/profiles => ../../../../../opentelemetry-proto-go/otlp/profiles
+
+replace go.opentelemetry.io/proto/otlp/resource => ../../../../../opentelemetry-proto-go/otlp/resource
+
+replace go.opentelemetry.io/proto/otlp/trace => ../../../../../opentelemetry-proto-go/otlp/trace
